@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fetch using MySQL and Node.js</title>
+</head>
+<style>
+    .btn {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <div class="table-data">
+
+        <h2>Display Books using Node.js & MySQL</h2>
+        <table border="1">
+            <tr>
+                <th>S.N</th>
+                <th>Aurthor First Name</th>
+                <th>Aurthor Last Name</th>
+                <th>Title</th>
+                <th>Available</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+
+            <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+                <tr>
+                    <td>
+                        <%=data.bo_bookID; %>
+                    </td>
+                    <td>
+                        <%=data.bo_firstnameauthor %>
+                    </td>
+                    <td>
+                        <%=data.bo_lastnameauthor %>
+                    </td>
+                    <td>
+                        <%=data.bo_title%>
+                    </td>
+                    <td>
+                        <%=data.bo_available%>
+                    </td>
+                    <td><a href="/books/form/update">Edit</a></td>
+                    <td><a href="/books/form/delete">Delete</a></td>
+                </tr>
+                <% i++; }) %>
+                    <% } else{ %>
+                        <tr>
+                            <td colspan="7">No Data Found</td>
+                        </tr>
+                        <% } %>
+        </table>
+        <a class="btn" href="./form">+ CREATE NEW</a>
+    </div>
+</body>
+
+</html>
