@@ -23,9 +23,11 @@ app.use(session({
 app.use(flash());
 var booksRouter = require('./Routes/books');
 var memberRouter = require('./Routes/members');
+var publishersRouter = require('./Routes/publishers');
 const PORT = 3000;
 app.use('/books', booksRouter);
 app.use('/members', memberRouter);
+app.use('/publishers', publishersRouter);
 app.set('views', __dirname + '/views'); // general config
 app.set('view engine', 'ejs');
 app.listen(PORT, () => console.log(`Express server currently running on port ${PORT}`));
