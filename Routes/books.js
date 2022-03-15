@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../databases');
+var exp = require('../exports/books_exp');
 router.get('/form', function (req, res, next) {
     console.log("m here")
     res.render('books');
@@ -58,6 +59,10 @@ router.post('/delete', function (req, res, next) {
         db.query('ALTER TABLE books AUTO_INCREMENT = 1')
     }
     res.redirect('/books/form/delete');
+});
+router.get('/exports', function (req, res, next) {
+    exp();
+    res.redirect('/books/books_list');
 });
 
 module.exports = router;
