@@ -3,7 +3,6 @@
 const csvtojson = require('csvtojson');
 const mysql = require("mysql");
 var con = require('../databases');
-
 // CSV file name
 const fileName = "publishers.csv";
 let imp = () => {

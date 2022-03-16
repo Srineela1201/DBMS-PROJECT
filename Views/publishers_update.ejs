@@ -4,23 +4,106 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<style>
+    .btn:hover {
+        color: blue;
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+
+        text-decoration: none;
+        color: black;
+
+        padding: 10px;
+        margin: 20px;
+        text-decoration: underline;
+    }
+
+    body {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 80, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 4rem;
+        margin-bottom: 4%;
+    }
+
+    .publishers-update {
+        border: 4px solid black;
+        border-radius: 16px;
+        padding-top: 2%;
+        padding-bottom: 8%;
+        padding-right: 1%;
+        padding-left: 1%;
+        background-color: white;
+    }
+
+    div {
+        text-align: center;
+        margin: 4%;
+    }
+
+    .title input {
+        margin-left: 20%;
+    }
+
+    .availability input {
+        margin-left: 12%;
+    }
+
+    button {
+        padding: 2% 4%;
+        font-weight: 600;
+        border: none;
+        border: 2px solid black;
+        background-color: #e9d8a6;
+        border-radius: 10px;
+
+    }
+
+    button:hover {
+        background-color: #ee9b00;
+
+    }
+</style>
 
 <body>
 
     <div class="publishers-update">
-        <h2>publishers Update</h2>
+        <h2>Publishers Update</h2>
         <form action="/publishers/edit" method="POST">
-            <label>ID</label>
-            <input type="text" placeholder="Enter ID of publisher" name="pub_publisherID" required>
-            <label>publisher Company Name</label>
-            <input type="text" placeholder="Enter publisher Company Name" name="pub_name">
-            <label>City</label>
-            <input type="text" placeholder="Enter publisher Last Name" name="pub_city">
-            <label>Locality</label>
-            <input type="text" placeholder="Enter City" name="pub_locality">
+            <div>
+                <label>ID</label>
+                <input type="text" placeholder="Enter ID of publisher" name="pub_publisherID" required>
+            </div>
+            <div>
+                <label>Publisher Company Name</label>
+                <input type="text" placeholder="Enter publisher Company Name" name="pub_name">
+            </div>
+            <div>
+                <label>City</label>
+                <input type="text" placeholder="Enter publisher Last Name" name="pub_city">
+            </div>
+            <div>
+                <label>Locality</label>
+                <input type="text" placeholder="Enter City" name="pub_locality">
+            </div>
 
             <button type="submit">Update</button>
     </div>
+    <a class="btn" href="../publishers_list">View Data</a>
     </div>
     <!--====form section start====--><code></code>
 </body>

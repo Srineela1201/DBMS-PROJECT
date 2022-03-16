@@ -4,25 +4,109 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<style>
+    .btn:hover {
+        color: blue;
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+
+        text-decoration: none;
+        color: black;
+
+        padding: 10px;
+        margin: 20px;
+        text-decoration: underline;
+    }
+
+    body {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 80, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 4rem;
+        margin-bottom: 4%;
+    }
+
+    .book-update {
+        border: 4px solid black;
+        border-radius: 16px;
+        padding-top: 2%;
+        padding-bottom: 8%;
+        padding-right: 1%;
+        padding-left: 1%;
+        background-color: white;
+    }
+
+    div {
+        text-align: center;
+        margin: 4%;
+    }
+
+    .title input {
+        margin-left: 20%;
+    }
+
+    .availability input {
+        margin-left: 12%;
+    }
+
+    button {
+        padding: 2% 4%;
+        font-weight: 600;
+        border: none;
+        border: 2px solid black;
+        background-color: #e9d8a6;
+        border-radius: 10px;
+
+    }
+
+    button:hover {
+        background-color: #ee9b00;
+
+    }
+</style>
 
 <body>
 
     <div class="book-update">
         <h2>Update book</h2>
         <form action="/books/edit" method="POST">
-            <label>ID</label>
-            <input type="text" placeholder="Enter ID of book" name="bo_bookID" required>
-            <label>Aurthor First Name</label>
-            <input type="text" placeholder="Enter Auhtor First Name" name="bo_firstnameauthor">
-            <label>Aurthor Last Name</label>
-            <input type="text" placeholder="Enter Author Last Name" name="bo_lastnameauthor">
-            <label>Title</label>
-            <input type="text" placeholder="Enter Title of book" name="bo_title">
-            <label>availablity</label>
-            <input type="text" placeholder="Enter book availablity" name="bo_available">
-
+            <div>
+                <label>ID</label>
+                <input type="text" placeholder="Enter ID of book" name="bo_bookID" required>
+            </div>
+            <div>
+                <label>Aurthor First Name</label>
+                <input type="text" placeholder="Enter Auhtor First Name" name="bo_firstnameauthor">
+            </div>
+            <div>
+                <label>Aurthor Last Name</label>
+                <input type="text" placeholder="Enter Author Last Name" name="bo_lastnameauthor">
+            </div>
+            <div>
+                <label>Title</label>
+                <input type="text" placeholder="Enter Title of book" name="bo_title">
+            </div>
+            <div>
+                <label>availablity</label>
+                <input type="text" placeholder="Enter book availablity" name="bo_available">
+            </div>
             <button type="submit">Update</button>
     </div>
+    <a class="btn" href="../books_list">View Data</a>
     </div>
     <!--====form section start====--><code></code>
 </body>

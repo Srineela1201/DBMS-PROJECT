@@ -5,6 +5,9 @@
     <title>Fetch using MySQL and Node.js</title>
 </head>
 <style>
+    .btn:hover {
+        color: blue;
+    }
     .btn {
         display: block;
         text-align: center;
@@ -15,6 +18,46 @@
 
         padding: 10px;
         margin: 20px;
+        text-decoration: underline;
+    }
+
+    .btn:hover {
+        color: blue;
+    }
+
+    .table-data {
+        text-align: center;
+    }
+
+    h2 {
+        color: green;
+    }
+
+    label {
+        cursor: pointer;
+        color: rebeccapurple;
+        padding: 10px;
+        margin: 3px;
+    }
+
+    th {
+        color: red;
+    }
+
+    td {
+        color: black;
+    }
+
+    body {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 80, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     }
 </style>
 
@@ -22,7 +65,7 @@
     <div class="table-data">
 
         <h2>Display members using Node.js & MySQL</h2>
-        <table border="1">
+        <table border="1" align="center" style="background-color:white">
             <tr>
                 <th>S.N</th>
                 <th>Member First Name</th>
@@ -70,6 +113,7 @@
         <a class="btn" href="./form">+ CREATE NEW</a>
         <a class="btn" href="./exports">Export Now</a>
         <a class="btn" href="./imports">Import Now</a>
+        <a class="btn" href="../">Home page</a>
 
     </div>
 </body>

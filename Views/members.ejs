@@ -4,24 +4,109 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<style>
+    .btn:hover {
+        color: blue;
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+
+        text-decoration: none;
+        color: black;
+
+        padding: 10px;
+        margin: 20px;
+        text-decoration: underline;
+    }
+
+    body {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 80, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 4rem;
+        margin-bottom: 4%;
+    }
+
+    .members-detail {
+        border: 4px solid black;
+        border-radius: 16px;
+        padding-top: 2%;
+        padding-bottom: 8%;
+        padding-right: 1%;
+        padding-left: 1%;
+        background-color: white;
+    }
+
+    div {
+        text-align: center;
+        margin: 4%;
+    }
+
+    .title input {
+        margin-left: 20%;
+    }
+
+    .availability input {
+        margin-left: 12%;
+    }
+
+    button {
+        padding: 2% 4%;
+        font-weight: 600;
+        border: none;
+        border: 2px solid black;
+        background-color: #e9d8a6;
+        border-radius: 10px;
+
+    }
+
+    button:hover {
+        background-color: #ee9b00;
+
+    }
+</style>
 
 <body>
     <!--====form section start====-->
     <div class="members-detail">
         <h2>Create Members Data</h2>
         <form action="/members/create" method="POST">
-            <label>Member First Name</label>
-            <input type="text" placeholder="Enter Member First Name" name="mem_firstname" required>
-            <label>Member Last Name</label>
-            <input type="text" placeholder="Enter Member Last Name" name="mem_lastname" required>
-            <label>City</label>
-            <input type="text" placeholder="Enter City of Member" name="mem_city" required>
-            <label>Locality</label>
-            <input type="text" placeholder="Enter Locality of Membe" name="mem_locality" required>
-            <label>Date</label>
-            <input type="date" placeholder="Enter Date of Joining" name="mem_date" required>
+            <div>
+                <label>Member First Name</label>
+                <input type="text" placeholder="Enter Member First Name" name="mem_firstname" required>
+            </div>
+            <div>
+                <label>Member Last Name</label>
+                <input type="text" placeholder="Enter Member Last Name" name="mem_lastname" required>
+            </div>
+            <div>
+                <label>City</label>
+                <input type="text" placeholder="Enter City of Member" name="mem_city" required>
+            </div>
+            <div>
+                <label>Locality</label>
+                <input type="text" placeholder="Enter Locality of Membe" name="mem_locality" required>
+            </div>
+            <div>
+                <label>Date</label>
+                <input type="date" placeholder="Enter Date of Joining" name="mem_date" required>
+            </div>
             <button type="submit">Insert</button>
     </div>
+    <a class="btn" href="./members_list">View Data</a>
     </div>
 
 </body>
