@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var db = require('../databases');
 var exp = require('../exports/publishers_exp')
+var imp = require('../imports/publishers_imp')
 router.get('/form', function (req, res, next) {
     res.render('publishers');
 });
@@ -61,6 +62,10 @@ router.post('/delete', function (req, res, next) {
 });
 router.get('/exports', function (req, res, next) {
     exp();
+    res.redirect('/publishers/publishers_list');
+});
+router.get('/imports', function (req, res, next) {
+    imp();
     res.redirect('/publishers/publishers_list');
 });
 

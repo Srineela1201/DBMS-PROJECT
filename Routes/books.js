@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var db = require('../databases');
 var exp = require('../exports/books_exp');
+var imp = require('../imports/books_imp');
 router.get('/form', function (req, res, next) {
     console.log("m here")
     res.render('books');
@@ -64,5 +65,8 @@ router.get('/exports', function (req, res, next) {
     exp();
     res.redirect('/books/books_list');
 });
-
+router.get('/imports', function (req, res, next) {
+    imp();
+    res.redirect('/books/books_list');
+});
 module.exports = router;
