@@ -14,17 +14,18 @@
         display: block;
         text-align: center;
         font-size: 24px;
-
         text-decoration: none;
         color: black;
-
         padding: 10px;
         margin: 20px;
-        text-decoration: underline;
+        /* text-decoration: underline; */
+        border-radius: 10px;
     }
 
     .btn:hover {
-        color: blue;
+        /* color: blue; */
+        background: black;
+        color: white;
     }
 
     .table-data {
@@ -36,11 +37,21 @@
     }
 
     th {
-        color: red;
+        color: rgb(255, 255, 255);
+        border: none;
+        background: rgb(0, 0, 0);
+        width: 40vw;
+        height: 10vh;
     }
 
     td {
         color: black;
+        border: none;
+        background: yellow;
+    }
+
+    table{
+        border: none;
     }
 
     body {
@@ -51,8 +62,16 @@
         align-items: center;
         justify-content: center;
         font-family: Arial, Helvetica, sans-serif;
-        background: rgb(2, 0, 36);
-        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 80, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        background: rgb(255, 255, 255);
+        /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 80, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); */
+    }
+    .btn-pub_list{
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        margin-top: 10vw;
+        background: rgb(209, 209, 209);
+        
     }
 </style>
 
@@ -95,11 +114,12 @@
                         <% } %>
         </table>
 
-
+        <div class="btn-pub_list">
         <a class="btn" href="./form">+ CREATE NEW</a>
         <a class="btn" href="./exports">Export Now</a>
         <a class="btn" href="./imports">Import Now</a>
         <a class="btn" href="../">Home page</a>
+        </div>
 
     </div>
 </body>

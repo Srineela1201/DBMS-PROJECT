@@ -6,7 +6,9 @@
 </head>
 <style>
     .btn:hover {
-        color: blue;
+        color: rgb(255, 255, 255);
+        background: black;
+
     }
 
     .btn {
@@ -16,22 +18,25 @@
 
         text-decoration: none;
         color: black;
+        background: #e9d8a6;
+        border-radius: 10px;;
 
         padding: 10px;
         margin: 20px;
-        text-decoration: underline;
+        /* text-decoration: underline; */
     }
+
 
     body {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 100vw;
         height: 100vh;
         align-items: center;
         justify-content: center;
         font-family: Arial, Helvetica, sans-serif;
-        background: rgb(2, 0, 36);
-        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 80, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        background: rgb(255, 255, 255);
+        /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 80, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); */
     }
 
     h2 {
@@ -98,7 +103,7 @@
             </div>
             <div>
                 <label>Locality</label>
-                <input type="text" placeholder="Enter Locality of Membe" name="mem_locality" required>
+                <input type="text" placeholder="Enter Locality of Member" name="mem_locality" required>
             </div>
             <div>
                 <label>Date</label>

@@ -1,9 +1,51 @@
-var mysql = require('mysql');
+var pass = "Ashu@1405";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var mysql = require('mysql2');
 
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Deepak@2001",
+    password: pass,
     port: 3306, // default port for mysql is 3306
     database: "library", // database from which we want to connect out node application
 });
